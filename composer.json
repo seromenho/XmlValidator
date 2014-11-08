@@ -1,5 +1,5 @@
 {
-  "name": "seromenho/XmlValidator",
+  "name": "seromenho/xml-validator",
   "description": "Validates your XML against a xsd schema file.",
   "keywords": ["XML", "XSD", "XML Validator", "psr-4"],
   "homepage": "http://github.com/seromenho/XmlValidator",
