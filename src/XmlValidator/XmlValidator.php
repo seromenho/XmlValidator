@@ -61,11 +61,11 @@ class XmlValidator
             }
 
             if (!$valid) {
-                $messages = $this->getXmlErrors($internalErrors);
+                $this->errors  = $this->getXmlErrors($internalErrors);
                 if (empty($messages)) {
-                    $messages = array(sprintf('The XML "%s" is not valid.', $xml));
+                    $this->errors[]  = new Error("","","The XML is not valid","","","");
                 }
-                throw new \InvalidArgumentException(implode("\n", $messages), 0, $e);
+                return false;
             }
         }
 
