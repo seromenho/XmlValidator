@@ -4,7 +4,19 @@ namespace XmlValidator;
 
 class XmlValidator
 {
+
+    /**
+     * @var Array of \Error
+     */
     private $errors;
+
+    /**
+     * @return mixed
+     */
+    public function getErrors()
+    {
+        return $this->errors;
+    }
 
     public function validate($xml, $schema)
     {
@@ -81,5 +93,9 @@ class XmlValidator
         libxml_use_internal_errors($internalErrors);
 
         return $errors;
+    }
+
+    public function isValid(){
+        return !$this->getErrors();
     }
 }
