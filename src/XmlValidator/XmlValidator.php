@@ -41,8 +41,7 @@ class XmlValidator
 
             $e = null;
             if (!is_array($schema) && is_file((string) $schema)) {
-                $schemaSource = file_get_contents((string) $schema);
-                $valid = @$dom->schemaValidateSource($schemaSource);
+                $valid = @$dom->schemaValidate($schema);
             } else {
                 libxml_use_internal_errors($internalErrors);
 
