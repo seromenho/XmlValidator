@@ -8,7 +8,7 @@ class XmlValidator
     /**
      * @var Array of \Error
      */
-    private $errors;
+    public $errors;
 
     /**
      * @return mixed
