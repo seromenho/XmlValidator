@@ -62,7 +62,7 @@ class XmlValidator
 
             if (!$valid) {
                 $this->errors  = $this->getXmlErrors($internalErrors);
-                if (empty($messages)) {
+                if (empty($this->errors)) {
                     $this->errors[]  = new Error("","","The XML is not valid","","","");
                 }
                 return false;
