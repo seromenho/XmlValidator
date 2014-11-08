@@ -45,7 +45,7 @@ class XmlValidator
             } else {
                 libxml_use_internal_errors($internalErrors);
 
-                throw new \InvalidArgumentException('The schemaOrCallable argument has to be a valid path to XSD file or callable.');
+                throw new \InvalidArgumentException('The schema argument has to be a valid path to XSD file or callable.');
             }
 
             if (!$valid) {
