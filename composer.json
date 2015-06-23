@@ -15,8 +15,14 @@
   "require": {
     "php": ">=5.4.0"
   },
+  "require-dev": {
+    "phpunit/phpunit": "4.7.*"
+  },
   "autoload": {
     "psr-4": {"XmlValidator\\": "src/"}
+  },
+  "autoload-dev": {
+    "psr-4": {"XmlValidator\\Tests\\": "tests/" }
   },
   "extra": {
     "branch-alias": {
