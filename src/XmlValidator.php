@@ -2,8 +2,6 @@
 
 namespace XmlValidator;
 
-use XmlValidator\Exception\InvalidArgumentException;
-
 class XmlValidator
 {
 
@@ -23,7 +21,7 @@ class XmlValidator
     public function validate($xml, $schema)
     {
         if ('' === trim($xml)) {
-            throw new InvalidArgumentException(sprintf('File %s does not contain valid XML, it is empty.', $xml));
+            throw new \InvalidArgumentException(sprintf('File %s does not contain valid XML, it is empty.', $xml));
         }
 
         $internalErrors = libxml_use_internal_errors(true);
@@ -45,7 +43,7 @@ class XmlValidator
 
         foreach ($dom->childNodes as $child) {
             if ($child->nodeType === XML_DOCUMENT_TYPE_NODE) {
-                throw new InvalidArgumentException('Document types are not allowed.');
+                throw new \InvalidArgumentException('Document types are not allowed.');
             }
         }
 
@@ -59,7 +57,7 @@ class XmlValidator
             } else {
                 libxml_use_internal_errors($internalErrors);
 
-                throw new InvalidArgumentException('The schema argument has to be a valid path to XSD file or callable.');
+                throw new \InvalidArgumentException('The schema argument has to be a valid path to XSD file or callable.');
             }
 
             if (!$valid) {
