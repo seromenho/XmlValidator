@@ -16,6 +16,8 @@ Validate Xml against a xsd schema file.
 
 ```php
 <?php
+require "./vendor/autoload.php";
+use XmlValidator\XmlValidator;
 
 $xml = "<sample>my xml string</sample>";
 $xsd = "path_to_xsd_file.xsd";
@@ -29,15 +31,15 @@ try{
     if(!$xmlValidator->isValid()){
         
         // Do whatever with the errors.
-        foreach($xmlValidator->errors as $error){
+        foreach ($xmlValidator->errors as $error) {
             /*echo sprintf('[%s %s] %s (in %s - line %d, column %d)',
                 $error->level, $error->code, $error->message, 
                 $error->file, $error->line, $error->column
             ); */
         }
     }
-} catch (\Exception $e){
-    // catch Exception
+} catch (\InvalidArgumentException $e){
+    // catch InvalidArgumentException
 }
 
 ```
