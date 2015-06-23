@@ -1,5 +1,7 @@
 # PHP Xml validator
 
+[![Build Status](https://travis-ci.org/seromenho/XmlValidator.svg)](https://travis-ci.org/seromenho/XmlValidator)
+
 Validate Xml against a xsd schema file.
 
 ## Installation
