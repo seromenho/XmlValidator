@@ -36,8 +36,8 @@ try{
             ); */
         }
     }
-} catch (\InvalidArgumentException $e){
-    // catch InvalidArgumentException
+} catch (\Exception $e){
+    // catch Exception
 }
 
 ```
