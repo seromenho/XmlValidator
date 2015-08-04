@@ -1,6 +1,7 @@
 # PHP Xml validator
 
 [![Build Status](https://travis-ci.org/seromenho/XmlValidator.svg)](https://travis-ci.org/seromenho/XmlValidator)
+[![Packagist](https://img.shields.io/packagist/dt/seromenho/xml-validator.svg)](https://packagist.org/packages/seromenho/xml-validator)
 
 Validate Xml against a xsd schema file.
 
